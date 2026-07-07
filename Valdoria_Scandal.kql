@@ -49,3 +49,9 @@ AuthenticationEvents
 | where username in (auth_attempts)
 | count 
 // 70
+
+Employees
+| distinct role
+
+Employees
+| where role == "Editorial Intern"
