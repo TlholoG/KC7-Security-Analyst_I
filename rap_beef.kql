@@ -9,3 +9,6 @@ InboundNetworkEvents
 | where timestamp between (datetime("2024-04-10T00:00:00") .. datetime(2024-04-11T00:00:00))
 | where url has_any ("washington", "fluffy")
 | where src_ip has "18.66.52.227"
+
+PassiveDns
+| where ip == "18.66.52.227"
