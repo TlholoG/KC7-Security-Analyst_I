@@ -12,3 +12,15 @@ InboundNetworkEvents
 
 PassiveDns
 | where ip == "18.66.52.227"
+
+Email
+| take 10 
+
+Email
+| where link has "betterlyrics4u.com"
+
+let _targets = Email
+| where link has "betterlyrics4u.com"
+| distinct recipient;
+Employees
+| where email_addr in (_targets)
