@@ -3,3 +3,49 @@ Employees
 
 Employees
 | count 
+
+Employees
+| where role == "Editorial Director"
+
+Email
+| where recipient == "nene_leaks@valdoriantimes.news"
+| count
+
+Email
+| where sender has "weprinturstuff.com"
+| distinct sender
+| count 
+
+Employees
+| where name == "Lois Lane"
+// IP = 10.10.0.22
+
+OutboundNetworkEvents
+| where src_ip == "10.10.0.22"
+| distinct url
+| count 
+// 62
+
+PassiveDns
+| where domain has "hire"
+| distinct ip
+| count 
+// 6
+
+let mary_ip =
+Employees
+| where name has "Mary"
+| distinct ip_addr;
+OutboundNetworkEvents
+| where src_ip in (mary_ip)
+| distinct url
+| count 
+// 58
+
+let auth_attempts = Employees
+|where name has "Mary"
+| distinct username;
+AuthenticationEvents
+| where username in (auth_attempts)
+| count 
+// 70
