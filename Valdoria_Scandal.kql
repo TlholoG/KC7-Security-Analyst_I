@@ -55,3 +55,12 @@ Employees
 
 Employees
 | where role == "Editorial Intern"
+
+let Sonia_Gose_ip =
+Employees
+| where name has "Sonia Gose"
+| distinct ip_addr;
+OutboundNetworkEvents
+| where src_ip in (Sonia_Gose_ip)
+| distinct url
+| count 
