@@ -10,3 +10,19 @@ First High school: Lalibela High
 1 succesful login to host machine  at 2025-04-07 14:11:23+00:00
 IP Address used to login 109.52.231.254
 
+AuthenticationEvents shows a succesfull user login with username 'afstorm'
+with hostname MAIL-SERVER01 and src_ip 182.45.67.89 
+timestamp 2025-04-03 12:20:00+00:00
+
+Querying the PassiveDNS two domains associated with this IP address where found.
+influencer-deals.net and dior-partners.com
+
+AuthenticationEvents User_agent shows outdated browser and operating system where used.
+to authenticat src_ip 182.45.67.89 
+MSIE 5.0 and Windows NT 5.2
+
+182.45.67.89 was located to be In China
+InboundNetworkEvents url shows the attacker was searching how to hack Afomiya's 
+location from her instagram story
+
+The attacker exfiltrated emails and send them to an email address noreply@influencer-deals.net

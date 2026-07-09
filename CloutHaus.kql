@@ -11,3 +11,20 @@ Email
 | where recipient == "afomiya_storm@clouthaus.com"
 | where subject contains "dior" or links contains "dior"
 
+AuthenticationEvents
+| where hostname == "OQPA-DESKTOP"
+// the src_ip that is foreign to the company network is 109.52.231.254
+
+AuthenticationEvents
+| where username == "afstorm"
+// found unusual ip address logged in using the username afstorm
+
+PassiveDns
+| where ip == "182.45.67.89"
+| distinct domain
+// looking for any domains that have been associated with the foreign ip address
+
+Email
+| where sender == "afomiya_storm@clouthaus.com"
+| where subject contains "Forward"
+// Finding email address that attacker exfiltrated data to noreply@influencer-deals.net
