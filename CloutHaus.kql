@@ -1,0 +1,13 @@
+| take 10
+
+Employees
+| summarize count() by company_domain
+
+Employees
+| where name contains "afomiya"
+| distinct role
+
+Email
+| where recipient == "afomiya_storm@clouthaus.com"
+| where subject contains "dior" or links contains "dior"
+
