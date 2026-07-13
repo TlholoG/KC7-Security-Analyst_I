@@ -8,9 +8,24 @@ Files and URLs can be uploaded to VirusTotal.
 Organizations that pay for access can download uploaded files. 
 As a result, do not upload sensitive files or files that belong to your employer.
 ======================================================================================
-
+fileshash: 60517f898bfac156cd298fd0a45f2e06cecee232a54667213458b99dc8d80de7
 Test the fileshash to see if anything comes up, the file has been flagged 0 times on 
 detection engines.
 
-Used MITRE ATT&CK to find the technique ID for 'masquerading' 
+Used MITRE ATT&CK (https://attack.mitre.org/) to find the technique ID for 'masquerading' 
 T1036
+There exist a technique called Hijack Execution Flow, which takes legit system process
+and makes it execute malicious code. A Sub-technique is "DLL Search Order Hijacking" 
+technique ID:
+T1574.001
+
+This file was first seen in the wild:
+2021-02-11 21:15:51 UTC
+Its first Submision:
+2021-06-18 09:31:41 UTC
+
+========================================================================================
+filehash: 4788925332fc6128c895b0e0736a1d7d90e3891f2abb456523cbf0c1ced7d1e2
+this file has 34/68 and a community score of -68.
+
+Signature info: A certificate was explicitly revoked by its issuer.
