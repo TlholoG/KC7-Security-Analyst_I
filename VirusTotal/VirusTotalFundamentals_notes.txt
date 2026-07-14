@@ -77,3 +77,17 @@ and check each file.
 It has a sha-1 : 85d1e350486fea5945f46842685f248340fbf7dc
 The signature status has been revoked
 The timestamp of its first creation: 1992-06-19 22:22:17 UTC
+This file was compiled using  Borland Delphi (7) compiler
+
+A user suggests a C2 server and gives ip address  146.70.161.126
+Searching the IP address we can see on the 2025-02-12 this file was in communication with a Win32 DLL file
+named 	WABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZoYDHNFTTPDJL50NWXNEWCHBUDCPJOeEZNbd Showing an existance of a C2 server
+
+==============================================================================================================
+filehash: 2bf0a64fe7aea262c96fc7d52b1e28486ff607caa9513fd88583e19454f9c500
+Size: 301.35 MB
+
+This size is too large for a sandbox and attackers know it, so the solution:
+A technique called Debloating or deflating. Deflated copy was uploaded on VirusTotal
+filehash: 71d5a558096b640366dbc711ef2870c0269b4138352bb98da0be30d9b6d6bb9b
+Size: 2.52 MB
