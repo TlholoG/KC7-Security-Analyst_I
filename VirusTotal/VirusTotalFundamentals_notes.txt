@@ -70,3 +70,10 @@ M-Trans Maciej Caban
 It belongs to the malware family: IcedID
 looking at the Relations tab, this file contacted a domain "plivetrakoy.com"
 It first resolved to DNS with ip: 193.149.180.175
+looking at  Execution Parents, we see the file's execution parent name:
+IRS_form_Package_17-01-2023_19-25-53 (1).zip
+this file  is a zip file fortunately there is only one file in it, VirusTotal would unzip the folder 
+and check each file.
+It has a sha-1 : 85d1e350486fea5945f46842685f248340fbf7dc
+The signature status has been revoked
+The timestamp of its first creation: 1992-06-19 22:22:17 UTC
