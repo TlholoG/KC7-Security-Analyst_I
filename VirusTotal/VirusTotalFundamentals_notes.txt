@@ -50,4 +50,23 @@ rule INDICATOR_EXE_DotNET_Encrypted {
     meta:
         author = "ditekSHen"
         description = "Detects encrypted or obfuscated .NET executables"
+
+It has a popular threat label: trojan.stealer/msil
 =====================================================================================================
+filehash: a54ca708c3bbef76dbaec817a9bb36d8b52e492b293d2127cd5be284caabb6d1
+
+this file has a ratio of 9/62 and a community scoreof -20
+though it has a low ratio we learn in the community comments what others think it is.
+a batloader.
+Caution must be taken as malicious actors can also leave comments.
+
+======================================================================================================
+filehash: 0221bf1e1bd171c17527a863531518a95bcc025c87888e66b9512a5651073d16
+
+this file has a ratio of 41/70 and a community scoreof -5
+This file has the hash as part of its file name.
+This File is signed by the same entity as the file above:
+M-Trans Maciej Caban
+It belongs to the malware family: IcedID
+looking at the Relations tab, this file contacted a domain "plivetrakoy.com"
+It first resolved to DNS with ip: 193.149.180.175
