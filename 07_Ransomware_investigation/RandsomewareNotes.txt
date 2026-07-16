@@ -1,0 +1,7 @@
+A randsome note was left on at least one of the infected hosts. 
+This query returns all file creation events where the filename is "We_Have_Your_Data_Pay_Up.txt".
+We identify the Sha256 hash of the ransom note and use it to find all other instances of the same file across the environment.
+File Sha256 hash: 97c348e95c8a8aeb8808f76434d73a92bbcb6b4586788365762b22624990b018
+First seen on host-machine: AMFB-MACHINE
+
+This machine belongs to: Anthony Davis

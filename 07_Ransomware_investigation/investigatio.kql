@@ -1,0 +1,19 @@
+// This query returns all file creation events where the filename ends with ".encrypted".
+// It is useful for identifying files that have been encrypted by ransomware.
+FileCreationEvents
+| where filename endswith ".encrypted"
+| count
+
+// This query returns the number of unique hostnames where encrypted files were created.
+// It helps in identifying the scope of the ransomware infection across different hosts.
+FileCreationEvents
+| where filename endswith ".encrypted"
+| distinct hostname 
+
+// A randsome note was left on at least one of the infected hosts. 
+// This query returns all file creation events where the filename is "We_Have_Your_Data_Pay_Up.txt".
+// We identify the Sha256 hash of the ransom note and use it to find all other instances of the same file across the environment.
+// 97c348e95c8a8aeb8808f76434d73a92bbcb6b4586788365762b22624990b018
+FileCreationEvents
+| where filename == "We_Have_Your_Data_Pay_Up.txt"
+
