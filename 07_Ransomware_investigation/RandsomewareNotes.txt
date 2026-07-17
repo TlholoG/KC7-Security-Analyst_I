@@ -4,4 +4,21 @@ We identify the Sha256 hash of the ransom note and use it to find all other inst
 File Sha256 hash: 97c348e95c8a8aeb8808f76434d73a92bbcb6b4586788365762b22624990b018
 First seen on host-machine: AMFB-MACHINE
 
-This machine belongs to: Anthony Davis
+This machine belongs to: Anthony Davism
+When we investigate this machines ProcessEvents, we see in the process_commandline a file was downloaded
+lockbyte_ransomer.exe
+The hackers put this file on the hospitals shared folder to quickly spread on the hospitals computers.
+spread_ransomware.exe is the new name on the hospitals shared drive
+patient_data_exporter.exe is the tool thy used to steal data from the hospital 
+patient records, archived patient records and old-patient data were exfiltrated.
+secure-health-access.com is the domain the data was sent to using curl commands.
+
+cmd.exe /c del C:\Users\andavis\Documents\patient_data_*.zip tells us the attacker tried to remove traces of stolen data.
+
+Timestamp: 2024-06-17 14:22:29+00:00
+patient_data_exporter.exe file was downloaded
+
+This domain resolves to ip: 203.0.113.1 and 203.0.113.2
+The additiona domain found asscociated with this IP address is: emr-help.net 
+
+The attackers have done their reconnaissance, we can see a total of 37 IP requests that came from these two IP's

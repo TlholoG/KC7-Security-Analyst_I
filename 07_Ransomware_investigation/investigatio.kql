@@ -17,3 +17,21 @@ FileCreationEvents
 FileCreationEvents
 | where filename == "We_Have_Your_Data_Pay_Up.txt"
 
+//ProcessEvents tell us what kinds of things happened on a computer.
+ProcessEvents
+| where hostname == "AMFB-MACHINE"
+| where timestamp between (datetime(2024-06-17) ..  datetime(2024-06-18))
+
+OutboundNetworkEvents
+| where url has "patient_data_exporter.exe"
+
+// We can use this domain to find more websites or servers that the hacker controls.
+PassiveDns
+| where domain == "secure-health-access.com"
+
+PassiveDns
+| where ip in ("203.0.113.1", "203.0.113.2")
+
+InboundNetworkEvents
+| where src_ip  in ("203.0.113.1", "203.0.113.2")
+| where url has "bypass"
